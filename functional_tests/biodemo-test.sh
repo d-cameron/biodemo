@@ -113,6 +113,7 @@ function test_stdout_exit {
         echo "Actual exit status: $exit_status"
         echo "Expected exit status: $expected_exit_status"
     fi 
+    eval "coverage run -a ${1/$test_program/$(which $test_program)}"
 }
 
 # Run a command and check that the exit status is 
@@ -135,6 +136,7 @@ function test_exit_status {
         echo "Actual exit status: $exit_status"
         echo "Expected exit status: $expected_exit_status"
     fi 
+    eval "coverage run -a ${1/$test_program/$(which $test_program)}"
 }
 
 
