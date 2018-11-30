@@ -14,3 +14,4 @@ script:
   - coverage combine .coverage functional_tests/test_data/.coverage
   - coverage report
   - codecov
+
