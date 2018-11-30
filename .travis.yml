@@ -1,0 +1,13 @@
+sudo: true
+dist: trusty
+
+language: python
+python:
+  - "3.4"
+
+before_install:
+  - ./.travis/install-dependencies.sh  
+
+script:
+  - ./functional_tests/biodemo-test.sh -p biodemo -d functional_tests/test_data
+  - ./.travis/unit-test.sh
