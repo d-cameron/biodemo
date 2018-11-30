@@ -11,3 +11,6 @@ before_install:
 script:
   - ./functional_tests/biodemo-test.sh -p biodemo -d functional_tests/test_data
   - ./.travis/unit-test.sh
+  - coverage combine .coverage functional_tests/test_data/.coverage
+  - coverage report
+  - codecov
